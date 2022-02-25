@@ -13,10 +13,6 @@ Il software stampa il maggiore. */
 //     console.log('Equals');
 // }
 
-
-
-
-
 /* Snack 2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga. */
@@ -50,24 +46,65 @@ Il software stampa prima la parola più corta, poi la parola più lunga. */
 //     }
 // }
 
-
-
-
-
 /* Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 (provatelo anche senza array) */
 
-let number;
-let sum = 0;
+// let number;
+// let sum = 0;
 
-for (let x = 1; x <= 10; x++) {
-    number = parseInt(prompt('Inserisci un numero. Richiesta n. ' + x));
-    sum += number;
-}
+// for (let x = 1; x <= 10; x++) {
+//     number = parseInt(prompt('Inserisci un numero. Richiesta n. ' + x));
+//     sum += number;
+// }
 
-console.log(sum);
+// console.log(sum);
 
+/* Snack 4
+In un array sono contenuti i nomi degli invitati alla festa del grande
+Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
+no alla festa. */
 
+// let urName = prompt("Type your name");
+// const nameList = [
+//     "Aldo",
+//     "Mauro",
+//     "Gabriel",
+//     "Henri",
+//     "Alessio",
+//     "Paolo",
+//     "Simone",
+//     "Federico",
+//     "Stefano",
+//     "Laura",
+//     "Camilla",
+//     "Erika",
+//     "Michela",
+//     "Giuliana",
+//     "Nicola",
+//     "Riccardo",
+//     "Giovanni",
+// ];
 
+// const msgTrue = "Welcome to The Great Gatsby Party!";
+// const msgFalse = "Sorry, you weren't invited";
+// const msgEmpty = "Please, enter your name";
+
+// let checkName = false;
+
+// if (urName == "") {
+//     console.log(msgEmpty);
+// } else {
+//     for (let x = 0; x < nameList.length; x++) {
+//         if (urName == nameList[x]) {
+//             checkName = true;
+//         }
+//     }
+
+//     if (checkName == false) {
+//         console.log(msgFalse);
+//     } else {
+//         console.log(msgTrue);
+//     }
+// }
