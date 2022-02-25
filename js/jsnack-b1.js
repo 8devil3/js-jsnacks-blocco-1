@@ -105,7 +105,7 @@ function checkSN3() {
         input7SN3.value,
         input8SN3.value,
         input9SN3.value,
-        input10SN3.value,
+        input10SN3.value
     ];
 
     for (let c = 0; c < arrSN3.length; c++) {
@@ -152,7 +152,7 @@ const nameListSN4 = [
     "Giuliana",
     "Nicola",
     "Riccardo",
-    "Giovanni",
+    "Giovanni"
 ];
 
 const input1SN4 = document.querySelector("#sn4-input1");
@@ -225,7 +225,7 @@ function checkSN5() {
         input3SN5.value,
         input4SN5.value,
         input5SN5.value,
-        input6SN5.value,
+        input6SN5.value
     ];
 
     const oddArr = [];
