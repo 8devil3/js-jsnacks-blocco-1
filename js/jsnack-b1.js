@@ -215,7 +215,6 @@ btnSubmitSN5.addEventListener("click", checkSN5);
 function checkSN5() {
     let checkNumSN5 = true;
     let sumSN5 = 0;
-    let checkEven = false;
 
     msgHTMLSN5.classList.remove("false");
 
