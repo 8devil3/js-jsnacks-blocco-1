@@ -13,6 +13,10 @@ Il software stampa il maggiore. */
 //     console.log('Equals');
 // }
 
+
+
+
+
 /* Snack 2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga. */
@@ -46,6 +50,10 @@ Il software stampa prima la parola più corta, poi la parola più lunga. */
 //     }
 // }
 
+
+
+
+
 /* Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
@@ -60,6 +68,10 @@ Il programma stampa la somma di tutti i numeri inseriti.
 // }
 
 // console.log(sum);
+
+
+
+
 
 /* Snack 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
@@ -108,3 +120,24 @@ no alla festa. */
 //         console.log(msgTrue);
 //     }
 // }
+
+
+
+
+
+/* Snack 5
+Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero,
+se è dispari inseriscilo nell’array. */
+
+// let number;
+// const arr = [];
+
+// for (let x = 1; x <= 6; x++) {
+//     number = parseInt(prompt("Please, enter a number. Request n. " + x));
+//     if (number % 2 != 0) {
+//         arr.push(number);
+//     }
+// }
+
+// console.log(arr);
