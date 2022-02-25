@@ -11,7 +11,7 @@ const msgHTMLSN1 = document.querySelector("#sn1-msg");
 btnSubmitSN1.addEventListener("click", checkSN1);
 
 function checkSN1() {
-    if (input1SN1.value == "" || input2SN1.value == "") {
+    if (input1SN1.value == "" || input2SN1.value == "") { // controllo se i campi sono vuoti
         msgHTMLSN1.innerHTML = "Type all requested numbers";
     } else {
         if (input1SN1.value > input2SN1.value) {
@@ -37,7 +37,7 @@ const msgHTMLSN2 = document.querySelector("#sn2-msg");
 btnSubmitSN2.addEventListener("click", checkSN2);
 
 function checkSN2() {
-    if (input1SN2.value == "" || input2SN2.value == "") {
+    if (input1SN2.value == "" || input2SN2.value == "") { // controllo se i campi sono vuoti
         msgHTMLSN2.innerHTML = "Type all requested words";
     } else {
         if (input1SN2.value.length > input2SN2.value.length) {
@@ -92,21 +92,21 @@ function checkSN3() {
     ];
 
     for (let c = 0; c < arrSN3.length; c++) {
-        if (arrSN3[c] == '') {
+        if (arrSN3[c] == "") {
             checkNumSN3 = false;
             break;
         }
     }
-    
-    if (checkNumSN3 == false){
+
+    if (checkNumSN3 == false) { // controllo se il campo è vuoto
         msgHTMLSN3.innerHTML = "Please, fill all fields!";
+        msgHTMLSN3.classList.add("false");
     } else {
-        for (let x = 0; x < arrSN3.length; x++) {
+        for (let x = 0; x < arrSN3.length; x++) { // iterazione tra i campi
             sumSN3 += parseInt(arrSN3[x]);
         }
         msgHTMLSN3.innerHTML = sumSN3;
     }
-
 }
 
 /* Snack 4
@@ -150,17 +150,17 @@ function checkSN4() {
 
     msgHTMLSN4.classList.remove("true", "false");
 
-    if (input1SN4.value == "") {
+    if (input1SN4.value == "") { // controllo se il campo è vuoto
         msgHTMLSN4.innerHTML = msgEmptySN4;
         msgHTMLSN4.classList.add("false");
     } else {
-        for (let x = 0; x < nameListSN4.length; x++) {
+        for (let x = 0; x < nameListSN4.length; x++) { // iterazione tra i nomi
             if (input1SN4.value.toLowerCase() == nameListSN4[x].toLowerCase()) {
                 checkNameSN4 = true;
             }
         }
 
-        if (checkNameSN4 == false) {
+        if (checkNameSN4 == false) { // messaggi all'utente
             msgHTMLSN4.innerHTML = msgFalseSN4;
             msgHTMLSN4.classList.add("false");
         } else {
@@ -188,6 +188,12 @@ const msgHTMLSN5 = document.querySelector("#sn5-msg");
 btnSubmitSN5.addEventListener("click", checkSN5);
 
 function checkSN5() {
+    let checkNumSN5 = true;
+    let sumSN5 = 0;
+    let checkEven = false;
+
+    msgHTMLSN5.classList.remove("false");
+
     const arrSN5 = [
         input1SN5.value,
         input2SN5.value,
@@ -199,12 +205,29 @@ function checkSN5() {
 
     const oddArr = [];
 
-    for (let x = 0; x < arrSN5.length; x++) {
-        if (arrSN5[x] % 2 != 0) {
-            oddArr.push(arrSN5[x]);
+    for (let i = 0; i < arrSN5.length; i++) {
+        if (arrSN5[i] == "") {
+            checkNumSN5 = false;
+            break; // interrompo per evitare le iterazioni inutili
+        }
+    }
+
+    if (checkNumSN5 == false) { // controllo se i campi sono vuoti
+        msgHTMLSN5.innerHTML = "Please, fill all fields!";
+        msgHTMLSN5.classList.add("false");
+    } else {
+        for (let x = 0; x < arrSN5.length; x++) {
+            if (arrSN5[x] % 2 != 0) {
+                oddArr.push(arrSN5[x]);
+                sumSN5 += arrSN5;
+            }
         }
 
-        msgHTMLSN5.innerHTML = oddArr;
+        if (sumSN5 % 2 != 0) { // controllo se tutti i numeri sono pari o dispari e stampo i messaggi
+            msgHTMLSN5.innerHTML = oddArr;
+        } else {
+            msgHTMLSN5.innerHTML = "All numbers are even";
+        }
     }
 }
 
@@ -224,7 +247,7 @@ btnSubmitSN6.addEventListener("click", checkSN6);
 function checkSN6() {
     let sumSN6 = 0;
 
-    if (input1SN6.value == "") {
+    if (input1SN6.value == "") { // controllo il campo se è vuoto
         msgHTMLSN6.innerHTML = "Please, type a number";
     } else if (input1SN6.value.length != 4) {
         msgHTMLSN6.innerHTML = "Please, type a four digits number";
