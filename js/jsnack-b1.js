@@ -148,19 +148,24 @@ btnSubmitSN4.addEventListener("click", checkSN4);
 function checkSN4() {
     let checkNameSN4 = false;
 
+    msgHTMLSN4.classList.remove('true','false');
+
     if (input1SN4.value == "") {
         msgHTMLSN4.innerHTML = msgEmptySN4;
+        msgHTMLSN4.classList.add('false');
     } else {
         for (let x = 0; x < nameListSN4.length; x++) {
-            if (input1SN4.value == nameListSN4[x]) {
+            if (input1SN4.value.toLowerCase() == nameListSN4[x].toLowerCase()) {
                 checkNameSN4 = true;
             }
         }
 
         if (checkNameSN4 == false) {
             msgHTMLSN4.innerHTML = msgFalseSN4;
+            msgHTMLSN4.classList.add('false');
         } else {
             msgHTMLSN4.innerHTML = msgTrueSN4;
+            msgHTMLSN4.classList.add('true');
         }
     }
 }
