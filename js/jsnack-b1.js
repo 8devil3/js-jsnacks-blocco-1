@@ -93,6 +93,8 @@ function checkSN3() {
     let sumSN3 = 0;
     let checkNumSN3 = true;
 
+    msgHTMLSN3.classList.remove("false");
+
     const arrSN3 = [
         input1SN3.value,
         input2SN3.value,
