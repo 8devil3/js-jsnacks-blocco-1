@@ -24,10 +24,6 @@ function checkSN1() {
     }
 }
 
-
-
-
-
 /* Snack 2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga. */
@@ -57,10 +53,6 @@ function checkSN2() {
     }
 }
 
-
-
-
-
 /* Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
@@ -83,7 +75,8 @@ const msgHTMLSN3 = document.querySelector("#sn3-msg");
 btnSubmitSN3.addEventListener("click", checkSN3);
 
 function checkSN3() {
-    let sum = 0;
+    let sumSN3 = 0;
+    let checkNumSN3 = true;
 
     const arrSN3 = [
         input1SN3.value,
@@ -98,16 +91,23 @@ function checkSN3() {
         input10SN3.value,
     ];
 
-    for (let x = 0; x < arrSN3.length; x++) {
-        sum += parseInt(arrSN3[x]);
+    for (let c = 0; c < arrSN3.length; c++) {
+        if (arrSN3[c] == '') {
+            checkNumSN3 = false;
+            break;
+        }
+    }
+    
+    if (checkNumSN3 == false){
+        msgHTMLSN3.innerHTML = "Please, fill all fields!";
+    } else {
+        for (let x = 0; x < arrSN3.length; x++) {
+            sumSN3 += parseInt(arrSN3[x]);
+        }
+        msgHTMLSN3.innerHTML = sumSN3;
     }
 
-    msgHTMLSN3.innerHTML = sum;
 }
-
-
-
-
 
 /* Snack 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
@@ -148,11 +148,11 @@ btnSubmitSN4.addEventListener("click", checkSN4);
 function checkSN4() {
     let checkNameSN4 = false;
 
-    msgHTMLSN4.classList.remove('true','false');
+    msgHTMLSN4.classList.remove("true", "false");
 
     if (input1SN4.value == "") {
         msgHTMLSN4.innerHTML = msgEmptySN4;
-        msgHTMLSN4.classList.add('false');
+        msgHTMLSN4.classList.add("false");
     } else {
         for (let x = 0; x < nameListSN4.length; x++) {
             if (input1SN4.value.toLowerCase() == nameListSN4[x].toLowerCase()) {
@@ -162,17 +162,13 @@ function checkSN4() {
 
         if (checkNameSN4 == false) {
             msgHTMLSN4.innerHTML = msgFalseSN4;
-            msgHTMLSN4.classList.add('false');
+            msgHTMLSN4.classList.add("false");
         } else {
             msgHTMLSN4.innerHTML = msgTrueSN4;
-            msgHTMLSN4.classList.add('true');
+            msgHTMLSN4.classList.add("true");
         }
     }
 }
-
-
-
-
 
 /* Snack 5
 Crea un array vuoto.
@@ -212,10 +208,6 @@ function checkSN5() {
     }
 }
 
-
-
-
-
 /* Snack 6
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
@@ -230,19 +222,13 @@ const msgHTMLSN6 = document.querySelector("#sn6-msg");
 btnSubmitSN6.addEventListener("click", checkSN6);
 
 function checkSN6() {
-
     let sumSN6 = 0;
 
     if (input1SN6.value == "") {
-
         msgHTMLSN6.innerHTML = "Please, type a number";
-
     } else if (input1SN6.value.length != 4) {
-
         msgHTMLSN6.innerHTML = "Please, type a four digits number";
-
     } else {
-
         for (let i = 0; i < input1SN6.value.length; i++) {
             sumSN6 += parseInt(input1SN6.value[i]);
         }
