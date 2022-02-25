@@ -11,8 +11,11 @@ const msgHTMLSN1 = document.querySelector("#sn1-msg");
 btnSubmitSN1.addEventListener("click", checkSN1);
 
 function checkSN1() {
+    msgHTMLSN1.classList.remove("false");
+
     if (input1SN1.value == "" || input2SN1.value == "") { // controllo se i campi sono vuoti
-        msgHTMLSN1.innerHTML = "Type all requested numbers";
+        msgHTMLSN1.innerHTML = "Please, type all requested numbers";
+        msgHTMLSN1.classList.add("false");
     } else {
         if (input1SN1.value > input2SN1.value) {
             msgHTMLSN1.innerHTML = input1SN1.value;
@@ -23,6 +26,10 @@ function checkSN1() {
         }
     }
 }
+
+
+
+
 
 /* Snack 2
 L’utente inserisce due parole in successione, con due prompt.
@@ -37,8 +44,12 @@ const msgHTMLSN2 = document.querySelector("#sn2-msg");
 btnSubmitSN2.addEventListener("click", checkSN2);
 
 function checkSN2() {
+
+    msgHTMLSN2.classList.remove("false");
+
     if (input1SN2.value == "" || input2SN2.value == "") { // controllo se i campi sono vuoti
-        msgHTMLSN2.innerHTML = "Type all requested words";
+        msgHTMLSN2.innerHTML = "Please ,type all requested words";
+        msgHTMLSN2.classList.add("false");
     } else {
         if (input1SN2.value.length > input2SN2.value.length) {
             msgHTMLSN2.innerHTML = input1SN2.value + " " + input2SN2.value;
@@ -52,6 +63,10 @@ function checkSN2() {
         }
     }
 }
+
+
+
+
 
 /* Snack 3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
@@ -108,6 +123,10 @@ function checkSN3() {
         msgHTMLSN3.innerHTML = sumSN3;
     }
 }
+
+
+
+
 
 /* Snack 4
 In un array sono contenuti i nomi degli invitati alla festa del grande
@@ -170,6 +189,10 @@ function checkSN4() {
     }
 }
 
+
+
+
+
 /* Snack 5
 Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
@@ -231,6 +254,10 @@ function checkSN5() {
     }
 }
 
+
+
+
+
 /* Snack 6
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
@@ -247,10 +274,14 @@ btnSubmitSN6.addEventListener("click", checkSN6);
 function checkSN6() {
     let sumSN6 = 0;
 
+    msgHTMLSN6.classList.remove("false");
+
     if (input1SN6.value == "") { // controllo il campo se è vuoto
         msgHTMLSN6.innerHTML = "Please, type a number";
+        msgHTMLSN6.classList.add("false");
     } else if (input1SN6.value.length != 4) {
         msgHTMLSN6.innerHTML = "Please, type a four digits number";
+        msgHTMLSN6.classList.add("false");
     } else {
         for (let i = 0; i < input1SN6.value.length; i++) {
             sumSN6 += parseInt(input1SN6.value[i]);
@@ -258,3 +289,23 @@ function checkSN6() {
         msgHTMLSN6.innerHTML = sumSN6;
     }
 }
+
+
+
+
+
+
+// ricarica della pagina
+const btnReload = document.querySelector("#reload");
+const btnTop = document.querySelector("#top");
+
+btnReload.addEventListener('click', function(){
+    location.reload();
+})
+
+btnTop.addEventListener('click', function(){
+    window.scrollTo(0, 0);
+})
+
+
+
