@@ -11,6 +11,8 @@ const msgHTMLSN1 = document.querySelector("#sn1-msg");
 btnSubmitSN1.addEventListener("click", checkSN1);
 
 function checkSN1() {
+
+    // reset classi
     msgHTMLSN1.classList.remove("false");
 
     if (input1SN1.value == "" || input2SN1.value == "") { // controllo se i campi sono vuoti
@@ -45,6 +47,7 @@ btnSubmitSN2.addEventListener("click", checkSN2);
 
 function checkSN2() {
 
+    // reset classi
     msgHTMLSN2.classList.remove("false");
 
     if (input1SN2.value == "" || input2SN2.value == "") { // controllo se i campi sono vuoti
@@ -93,6 +96,7 @@ function checkSN3() {
     let sumSN3 = 0;
     let checkNumSN3 = true;
 
+    // reset classi
     msgHTMLSN3.classList.remove("false");
 
     const arrSN3 = [
@@ -108,14 +112,14 @@ function checkSN3() {
         input10SN3.value
     ];
 
-    for (let c = 0; c < arrSN3.length; c++) {
+    for (let c = 0; c < arrSN3.length; c++) { // controllo se il campo è vuoto
         if (arrSN3[c] == "") {
             checkNumSN3 = false;
-            break;
+            break; // interrompo per evitare le iterazioni inutili
         }
     }
 
-    if (checkNumSN3 == false) { // controllo se il campo è vuoto
+    if (checkNumSN3 == false) { 
         msgHTMLSN3.innerHTML = "Please, fill all fields!";
         msgHTMLSN3.classList.add("false");
     } else {
@@ -169,6 +173,7 @@ btnSubmitSN4.addEventListener("click", checkSN4);
 function checkSN4() {
     let checkNameSN4 = false;
 
+    // reset classi
     msgHTMLSN4.classList.remove("true", "false");
 
     if (input1SN4.value == "") { // controllo se il campo è vuoto
@@ -216,6 +221,7 @@ function checkSN5() {
     let checkNumSN5 = true;
     let sumSN5 = 0;
 
+    // reset classi
     msgHTMLSN5.classList.remove("false");
 
     const arrSN5 = [
@@ -229,25 +235,25 @@ function checkSN5() {
 
     const oddArr = [];
 
-    for (let i = 0; i < arrSN5.length; i++) {
+    for (let i = 0; i < arrSN5.length; i++) { // controllo se i campi sono vuoti
         if (arrSN5[i] == "") {
             checkNumSN5 = false;
             break; // interrompo per evitare le iterazioni inutili
         }
     }
 
-    if (checkNumSN5 == false) { // controllo se i campi sono vuoti
+    if (checkNumSN5 == false) {
         msgHTMLSN5.innerHTML = "Please, fill all fields!";
         msgHTMLSN5.classList.add("false");
     } else {
         for (let x = 0; x < arrSN5.length; x++) {
             if (arrSN5[x] % 2 != 0) {
                 oddArr.push(arrSN5[x]);
-                sumSN5 += arrSN5;
+                sumSN5 += arrSN5; // sommo i numeri dell'array tra loro per poi verificare se sono tutti pari
             }
         }
 
-        if (sumSN5 % 2 != 0) { // controllo se tutti i numeri sono pari o dispari e stampo i messaggi
+        if (sumSN5 % 2 != 0) { // controllo se tutti i numeri sono pari e stampo i messaggi
             msgHTMLSN5.innerHTML = oddArr;
         } else {
             msgHTMLSN5.innerHTML = "All numbers are even";
@@ -275,6 +281,7 @@ btnSubmitSN6.addEventListener("click", checkSN6);
 function checkSN6() {
     let sumSN6 = 0;
 
+    // reset classi
     msgHTMLSN6.classList.remove("false");
 
     if (input1SN6.value == "") { // controllo il campo se è vuoto
@@ -296,7 +303,7 @@ function checkSN6() {
 
 
 
-// ricarica della pagina
+// ricarica e scroll to top della pagina
 const btnReload = document.querySelector("#reload");
 const btnTop = document.querySelector("#top");
 
