@@ -235,7 +235,7 @@ function checkSN5() {
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
 
-//const arrDigit = Array.from(urNum, Number); // Si poteva fare anche con anche questo metodo: Array.from() :)
+// Si poteva fare anche con Array.from() :)
 
 const input1SN6 = document.querySelector("#sn6-input1");
 
