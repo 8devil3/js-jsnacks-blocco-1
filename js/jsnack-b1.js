@@ -2,16 +2,27 @@
 L’utente inserisce due numeri in successione, con due prompt.
 Il software stampa il maggiore. */
 
-// let number1 = parseInt(prompt('Type the first number'));
-// let number2 = parseInt(prompt('Type the second number'));
+const input1SN1 = document.querySelector("#sn1-input1");
+const input2SN1 = document.querySelector("#sn1-input2");
 
-// if (number1 > number2) {
-//     console.log(number1);
-// } else if (number1 < number2) {
-//     console.log(number2);
-// } else {
-//     console.log('Equals');
-// }
+const btnSubmitSN1 = document.querySelector("#sn1-btn");
+const msgHTMLSN1 = document.querySelector("#sn1-msg");
+
+btnSubmitSN1.addEventListener("click", checkSN1);
+
+function checkSN1() {
+    if (input1SN1.value == "" || input2SN1.value == "") {
+        msgHTMLSN1.innerHTML = "Type all requested numbers";
+    } else {
+        if (input1SN1.value > input2SN1.value) {
+            msgHTMLSN1.innerHTML = input1SN1.value;
+        } else if (input1SN1.value < input2SN1.value) {
+            msgHTMLSN1.innerHTML = input2SN1.value;
+        } else {
+            msgHTMLSN1.innerHTML = "Equal numbers";
+        }
+    }
+}
 
 
 
@@ -21,34 +32,30 @@ Il software stampa il maggiore. */
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga. */
 
-// const msgHTML = document.querySelector('#msg');
-// const input1 = document.querySelector('#word1');
-// const input2 = document.querySelector('#word2');
-// const btnCheck = document.querySelector('#check');
+const input1SN2 = document.querySelector("#sn2-input1");
+const input2SN2 = document.querySelector("#sn2-input2");
 
-// btnCheck.addEventListener('click', checkWords);
+const btnSubmitSN2 = document.querySelector("#sn2-btn");
+const msgHTMLSN2 = document.querySelector("#sn2-msg");
 
-// function checkWords() {
-//     if (input1.value == '' || input2.value == '') {
+btnSubmitSN2.addEventListener("click", checkSN2);
 
-//         msgHTML.innerHTML = 'Inserisci entrambe le parole';
-
-//     } else {
-
-//         if (input1.value.length > input2.value.length) {
-
-//             msgHTML.innerHTML = input1.value + ' ' + input2.value;
-
-//         } else if (input1.value.length < input2.value.length) {
-
-//             msgHTML.innerHTML = input2.value + ' ' + input1.value;
-
-//         } else {
-
-//             msgHTML.innerHTML = 'Le parole hanno la stessa lunghezza pari a ' + input1.value.length + ' caratteri';
-//         }
-//     }
-// }
+function checkSN2() {
+    if (input1SN2.value == "" || input2SN2.value == "") {
+        msgHTMLSN2.innerHTML = "Type all requested words";
+    } else {
+        if (input1SN2.value.length > input2SN2.value.length) {
+            msgHTMLSN2.innerHTML = input1SN2.value + " " + input2SN2.value;
+        } else if (input1SN2.value.length < input2SN2.value.length) {
+            msgHTMLSN2.innerHTML = input2SN2.value + " " + input1SN2.value;
+        } else {
+            msgHTMLSN2.innerHTML =
+                "Words are equal in length.<br>Length is of " +
+                input1SN2.value.length +
+                " chars.";
+        }
+    }
+}
 
 
 
@@ -59,15 +66,44 @@ Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 (provatelo anche senza array) */
 
-// let number;
-// let sum = 0;
+const input1SN3 = document.querySelector("#sn3-input1");
+const input2SN3 = document.querySelector("#sn3-input2");
+const input3SN3 = document.querySelector("#sn3-input3");
+const input4SN3 = document.querySelector("#sn3-input4");
+const input5SN3 = document.querySelector("#sn3-input5");
+const input6SN3 = document.querySelector("#sn3-input6");
+const input7SN3 = document.querySelector("#sn3-input7");
+const input8SN3 = document.querySelector("#sn3-input8");
+const input9SN3 = document.querySelector("#sn3-input9");
+const input10SN3 = document.querySelector("#sn3-input10");
 
-// for (let x = 1; x <= 10; x++) {
-//     number = parseInt(prompt('Inserisci un numero. Richiesta n. ' + x));
-//     sum += number;
-// }
+const btnSubmitSN3 = document.querySelector("#sn3-btn");
+const msgHTMLSN3 = document.querySelector("#sn3-msg");
 
-// console.log(sum);
+btnSubmitSN3.addEventListener("click", checkSN3);
+
+function checkSN3() {
+    let sum = 0;
+
+    const arrSN3 = [
+        input1SN3.value,
+        input2SN3.value,
+        input3SN3.value,
+        input4SN3.value,
+        input5SN3.value,
+        input6SN3.value,
+        input7SN3.value,
+        input8SN3.value,
+        input9SN3.value,
+        input10SN3.value,
+    ];
+
+    for (let x = 0; x < arrSN3.length; x++) {
+        sum += parseInt(arrSN3[x]);
+    }
+
+    msgHTMLSN3.innerHTML = sum;
+}
 
 
 
@@ -78,48 +114,56 @@ In un array sono contenuti i nomi degli invitati alla festa del grande
 Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
 no alla festa. */
 
-// let urName = prompt("Type your name");
-// const nameList = [
-//     "Aldo",
-//     "Mauro",
-//     "Gabriel",
-//     "Henri",
-//     "Alessio",
-//     "Paolo",
-//     "Simone",
-//     "Federico",
-//     "Stefano",
-//     "Laura",
-//     "Camilla",
-//     "Erika",
-//     "Michela",
-//     "Giuliana",
-//     "Nicola",
-//     "Riccardo",
-//     "Giovanni",
-// ];
+const nameListSN4 = [
+    "Aldo",
+    "Mauro",
+    "Gabriel",
+    "Henri",
+    "Alessio",
+    "Paolo",
+    "Simone",
+    "Federico",
+    "Stefano",
+    "Laura",
+    "Camilla",
+    "Erika",
+    "Michela",
+    "Giuliana",
+    "Nicola",
+    "Riccardo",
+    "Giovanni",
+];
 
-// const msgTrue = "Welcome to The Great Gatsby Party!";
-// const msgFalse = "Sorry, you weren't invited";
-// const msgEmpty = "Please, enter your name";
+const input1SN4 = document.querySelector("#sn4-input1");
 
-// let checkName = false;
+const btnSubmitSN4 = document.querySelector("#sn4-btn");
+const msgHTMLSN4 = document.querySelector("#sn4-msg");
 
-// if (urName == "") {
-//     console.log(msgEmpty);
-// } else {
-//     for (let x = 0; x < nameList.length; x++) {
-//         if (urName == nameList[x]) {
-//             checkName = true;
-//         }
-//     }
+const msgTrueSN4 = "Welcome to The Great Gatsby Party!";
+const msgFalseSN4 = "Sorry, you weren't invited";
+const msgEmptySN4 = "Please, enter your name";
 
-//     if (checkName == false) {
-//         console.log(msgFalse);
-//     } else {
-//         console.log(msgTrue);
-//     }
-// }
+btnSubmitSN4.addEventListener("click", checkSN4);
+
+function checkSN4() {
+    let checkNameSN4 = false;
+
+    if (input1SN4.value == "") {
+        msgHTMLSN4.innerHTML = msgEmptySN4;
+    } else {
+        for (let x = 0; x < nameListSN4.length; x++) {
+            if (input1SN4.value == nameListSN4[x]) {
+                checkNameSN4 = true;
+            }
+        }
+
+        if (checkNameSN4 == false) {
+            msgHTMLSN4.innerHTML = msgFalseSN4;
+        } else {
+            msgHTMLSN4.innerHTML = msgTrueSN4;
+        }
+    }
+}
 
 
 
@@ -130,17 +174,39 @@ Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array. */
 
-// let number;
-// const arr = [];
+const input1SN5 = document.querySelector("#sn5-input1");
+const input2SN5 = document.querySelector("#sn5-input2");
+const input3SN5 = document.querySelector("#sn5-input3");
+const input4SN5 = document.querySelector("#sn5-input4");
+const input5SN5 = document.querySelector("#sn5-input5");
+const input6SN5 = document.querySelector("#sn5-input6");
 
-// for (let x = 1; x <= 6; x++) {
-//     number = parseInt(prompt("Please, enter a number. Request n. " + x));
-//     if (number % 2 != 0) {
-//         arr.push(number);
-//     }
-// }
+const btnSubmitSN5 = document.querySelector("#sn5-btn");
+const msgHTMLSN5 = document.querySelector("#sn5-msg");
 
-// console.log(arr);
+btnSubmitSN5.addEventListener("click", checkSN5);
+
+function checkSN5() {
+    const arrSN5 = [
+        input1SN5.value,
+        input2SN5.value,
+        input3SN5.value,
+        input4SN5.value,
+        input5SN5.value,
+        input6SN5.value,
+    ];
+
+    const oddArr = [];
+
+    for (let x = 0; x < arrSN5.length; x++) {
+        if (arrSN5[x] % 2 != 0) {
+            oddArr.push(arrSN5[x]);
+        }
+
+        msgHTMLSN5.innerHTML = oddArr;
+    }
+}
+
 
 
 
@@ -149,13 +215,32 @@ se è dispari inseriscilo nell’array. */
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
 
-let urNum = prompt('Type a 4 digit number');
-//const arrDigit = Array.from(urNum, Number); // Ho scoperto anche questo metodo: Array.from() :)
+//const arrDigit = Array.from(urNum, Number); // Si poteva fare anche con anche questo metodo: Array.from() :)
 
-let sum = 0;
+const input1SN6 = document.querySelector("#sn6-input1");
 
-for (let i = 0; i < urNum.length; i++) {
-    sum += parseInt(urNum[i]);
+const btnSubmitSN6 = document.querySelector("#sn6-btn");
+const msgHTMLSN6 = document.querySelector("#sn6-msg");
+
+btnSubmitSN6.addEventListener("click", checkSN6);
+
+function checkSN6() {
+
+    let sumSN6 = 0;
+
+    if (input1SN6.value == "") {
+
+        msgHTMLSN6.innerHTML = "Please, type a number";
+
+    } else if (input1SN6.value.length != 4) {
+
+        msgHTMLSN6.innerHTML = "Please, type a four digits number";
+
+    } else {
+
+        for (let i = 0; i < input1SN6.value.length; i++) {
+            sumSN6 += parseInt(input1SN6.value[i]);
+        }
+        msgHTMLSN6.innerHTML = sumSN6;
+    }
 }
-
-console.log(sum);

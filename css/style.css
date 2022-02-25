@@ -33,9 +33,15 @@ h1 {
 .container {
     text-align: center;
     padding: 1rem;
-    margin: 10rem auto 0 auto;
-    max-width: 350px;
-    min-height: 128px;
+    margin: 2rem auto 0 auto;
+    max-width: 480px;
+}
+
+.container hr {
+    margin: 3rem 0;
+    border: 0;
+    height: 1px;
+    background-color: #999;
 }
 
 button {
@@ -54,6 +60,21 @@ button {
 
 button:hover {
     background-color: #f80;
+}
+
+p {
+    font-weight: 700;
+}
+
+.sn-inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sn-inputs > input {
+    width: unset;
+    margin: 0.5rem;
+    flex-grow: 1;
 }
 
 input {
