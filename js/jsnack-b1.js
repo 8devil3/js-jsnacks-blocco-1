@@ -141,3 +141,21 @@ se è dispari inseriscilo nell’array. */
 // }
 
 // console.log(arr);
+
+
+
+
+/* Snack 6
+Chiedi un numero di 4 cifre all’utente
+e calcola la somma di tutte le cifre che compongono il numero. */
+
+let urNum = prompt('Type a 4 digit number');
+//const arrDigit = Array.from(urNum, Number); // Ho scoperto anche questo metodo: Array.from() :)
+
+let sum = 0;
+
+for (let i = 0; i < urNum.length; i++) {
+    sum += parseInt(urNum[i]);
+}
+
+console.log(sum);
