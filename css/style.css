@@ -5,7 +5,7 @@
 }
 
 :root {
-    background-color: #1a1a1a;
+    background-color: #2a2a2a;
     color: #fff;
 
     --orange: #f60;
@@ -13,12 +13,22 @@
     --yellow: #e6b20a;
     --grey: #2a2a2a;
 
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
 
     scroll-behavior: smooth;
 }
 
+header{
+    background-color: #1a1a1a;
+    border-bottom: 1px var(--orange) solid;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
 img {
     display: block;
@@ -26,23 +36,21 @@ img {
     height: 4rem;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 0.8rem;
-}
-
 .container {
-    text-align: center;
-    padding: 1rem;
-    margin: 2rem auto 4rem auto;
-    max-width: 480px;
+    margin: 140px auto 4rem auto;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.container hr {
-    margin: 3rem 0;
-    border: 0;
-    height: 1px;
-    background-color: #999;
+.container > div {
+    text-align: center;
+    width: calc((1320px / 3) - 4rem);
+    margin: 2rem;
+    border-bottom: 1px #999 solid;
+    padding-bottom: 1rem;
 }
 
 .desc {
@@ -70,6 +78,7 @@ button:hover {
 
 p {
     font-weight: 700;
+    height: 1.2rem;
 }
 
 .sn-inputs {
@@ -77,20 +86,15 @@ p {
     flex-wrap: wrap;
 }
 
-.sn-inputs > input {
-    width: unset;
-    margin: 0.5rem;
-    flex-grow: 1;
-}
-
 input {
     height: 2rem;
+    width: calc((100% / 2) - 1rem);
+    margin: 0.5rem;
+    flex-grow: 1;
     color: var(--grey);
     border-radius: 100px;
-    width: 50%;
     padding: 0 1rem;
     border: 0;
-    margin: 0.5rem 0;
 }
 
 input::placeholder {
@@ -101,6 +105,15 @@ input:focus-visible{
     outline: 2px var(--orange) solid;
 }
 
+#snack-4 input, #snack-6 input {
+    width: 200px;
+}
+
+#snack-3 input, #snack-5 input {
+    width: calc((100% / 3) - 1rem);
+    flex-grow: 0;
+}
+
 .false{
     color: #ff6666;
     font-weight: 600;
@@ -109,18 +122,4 @@ input:focus-visible{
 .true {
     color: #68d368;
     font-weight: 600;
-}
-
-#reload {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 1rem;
-}
-
-#top {
-    position: fixed;
-    bottom: 4.5rem;
-    right: 1rem;
-    padding: 1rem;
 }
