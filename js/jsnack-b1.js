@@ -303,17 +303,9 @@ function checkSN6() {
 
 
 
-// ricarica e scroll to top della pagina
+// ricarica della pagina
 const btnReload = document.querySelector("#reload");
-const btnTop = document.querySelector("#top");
 
 btnReload.addEventListener('click', function(){
     location.reload();
 })
-
-btnTop.addEventListener('click', function(){
-    window.scrollTo(0, 0);
-})
-
-
-
