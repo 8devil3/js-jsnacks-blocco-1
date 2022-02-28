@@ -391,6 +391,7 @@ function checkSN21() {
 
 
 
+
 /* Snack 2.2
 Inserisci un numero, se è pari stampa il numero,
 se è dispari stampa il numero successivo */
@@ -424,16 +425,6 @@ function checkSN22() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Snack 2.3
 Generatore di “nomi cognomi” casuali: prendendo una lista di nomi
 e una lista di cognomi, Gatsby vuole generare 
@@ -441,23 +432,31 @@ una falsa lista di 3 invitati. */
 
 const arrNamesSN23 = ['Gianni', 'Francesco', 'Paolo', 'Camilla', 'Laura', 'Elena', 'Alessandra', 'Giorgio', 'Mauro', 'Antonella'];
 const arrSurnamesSN23 = ['Rossi', 'Bianchi', 'Conte', 'Lorenzi', 'Marini', 'Castelli', 'Simoni', 'Bellini', 'Ferri'];
-const arrFullSN23 = [];
+
 let rndmNameSN23;
 let rndmSurnameSN23;
 
+const msgHTMLSN23 = document.querySelector("#sn23-msg");
+const btnSubmitSN23 = document.querySelector("#sn23-btn");
 
-for (let x = 0; x < 3; x++) {
 
-    rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length);
-    rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length);
-    arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]);
+btnSubmitSN23.addEventListener('click', checkSN23);
+
+function checkSN23() {
+
+    const arrFullSN23 = [];
+
+    for (let x = 0; x < 3; x++) {
+        
+        rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length);
+        rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length);
+        arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]);
+    }
+
+    let [p1, p2, p3] = [...arrFullSN23];
+
+    msgHTMLSN23.innerHTML = p1 + '<br>' + p2 + '<br>' + p3;
 }
-
-console.log(arrFullSN23);
-
-
-
-
 
 
 
