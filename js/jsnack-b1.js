@@ -226,12 +226,12 @@ function checkSN5() {
     msgHTMLSN5.classList.remove("false");
 
     const arrSN5 = [
-        parseInt(input1SN5.value),
-        parseInt(input2SN5.value),
-        parseInt(input3SN5.value),
-        parseInt(input4SN5.value),
-        parseInt(input5SN5.value),
-        parseInt(input6SN5.value)
+        input1SN5.value,
+        input2SN5.value,
+        input3SN5.value,
+        input4SN5.value,
+        input5SN5.value,
+        input6SN5.value
     ];
 
     const oddArr = [];
@@ -248,10 +248,10 @@ function checkSN5() {
         msgHTMLSN5.classList.add("false");
     } else {
         for (let x = 0; x < arrSN5.length; x++) {
-            if (arrSN5[x] % 2 != 0) {
-                oddArr.push(arrSN5[x]);
+            if (parseInt(arrSN5[x]) % 2 != 0) {
+                oddArr.push(parseInt(arrSN5[x]));
             }
-            sumSN5 += arrSN5[x]; // sommo i numeri dell'array tra loro per poi verificare se sono tutti pari
+            sumSN5 += parseInt(arrSN5[x]); // sommo i numeri dell'array tra loro per poi verificare se sono tutti pari
         }
 
         if (sumSN5 % 2 != 0) { // controllo se tutti i numeri sono pari e stampo i messaggi
