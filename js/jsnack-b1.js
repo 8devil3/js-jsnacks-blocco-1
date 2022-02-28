@@ -447,15 +447,14 @@ function checkSN23() {
     const arrFullSN23 = [];
 
     for (let x = 0; x < 3; x++) {
-        
-        rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length);
-        rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length);
-        arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]);
+        rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length); // nome casuale
+        rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length); // cognome casuale
+        arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]); // compongo nome + cognome
     }
 
-    let [p1, p2, p3] = [...arrFullSN23];
+    let [p1, p2, p3] = [...arrFullSN23]; // destrutturo la lista
 
-    msgHTMLSN23.innerHTML = p1 + '<br>' + p2 + '<br>' + p3;
+    msgHTMLSN23.innerHTML = p1 + '<br>' + p2 + '<br>' + p3; // stampo la lista
 }
 
 
@@ -469,8 +468,8 @@ const btnReload = document.querySelector("#reload");
 const arrInputs = document.querySelectorAll('input');
 
 btnReload.addEventListener('click', function(){
-    for (x = 0; x < arrInputs.length ; x++) {
+    for (x = 0; x < arrInputs.length ; x++) { // reset dei campi
         arrInputs[x].value ='';
     }
-    location.reload();
+    location.reload(); // ricarico la pagina
 })
