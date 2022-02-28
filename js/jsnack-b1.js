@@ -270,8 +270,6 @@ function checkSN5() {
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
 
-// Si poteva fare anche con Array.from() :)
-
 const input1SN6 = document.querySelector("#sn6-input1");
 
 const btnSubmitSN6 = document.querySelector("#sn6-btn");
@@ -336,30 +334,58 @@ Il software deve chiedere per 5 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 Esegui questo programma in due versioni, con il for e con il while. */
 
+const input1SN21 = document.querySelector("#sn21-input1");
+const input2SN21 = document.querySelector("#sn21-input2");
+const input3SN21 = document.querySelector("#sn21-input3");
+const input4SN21 = document.querySelector("#sn21-input4");
+const input5SN21 = document.querySelector("#sn21-input5");
 
-// let inputSN21_for;
-// let sumSN21_for = 0;
+const btnSubmitSN21 = document.querySelector("#sn21-btn");
+const msgHTMLSN21 = document.querySelector("#sn21-msg");
 
-// for (let x = 0; x < 5; x++) {
-//     inputSN21_for = parseInt(prompt('Type a number'));
-//     sumSN21_for += inputSN21_for;
-// }
+btnSubmitSN21.addEventListener("click", checkSN21);
 
-// console.log('somma FOR: ' + sumSN21_for);
+function checkSN21() {
+    let checkNumSN21 = true;
+    let sumForSN21 = 0;
+    let sumWhileSN21 = 0;
 
+    // reset classi
+    msgHTMLSN21.classList.remove("false");
 
+    const arrSN21 = [
+        input1SN21.value,
+        input2SN21.value,
+        input3SN21.value,
+        input4SN21.value,
+        input5SN21.value
+    ];
 
-// let inputSN21_while;
-// let iSN21 = 0;
-// let sumSN21_while = 0;
+    for (let i = 0; i < arrSN21.length; i++) { // controllo se i campi sono vuoti
+        if (arrSN21[i] == "") {
+            checkNumSN21 = false;
+            break; // interrompo per evitare le iterazioni inutili
+        }
+    }
 
-// while (iSN21 < 5) {
-//     inputSN21_while = parseInt(prompt('Type a number'));
-//     sumSN21_while += inputSN21_while;
-//     iSN21++;
-// }
+    if (!checkNumSN21) {
+        msgHTMLSN21.innerHTML = "Please, fill all fields!";
+        msgHTMLSN21.classList.add("false");
+    } else {
+        for (let x = 0; x < arrSN21.length; x++) {
+            sumForSN21 += parseInt(arrSN21[x]); // sommo i numeri
+        }
 
-// console.log('somma WHILE: ' + sumSN21_while);
+        let iSN21 = 0;
+        while (iSN21 < arrSN21.length) {
+            sumWhileSN21 += parseInt(arrSN21[iSN21]);
+            iSN21++;
+        }
+
+        msgHTMLSN21.innerHTML = 'Sum FOR: ' + sumForSN21 + '<br>Sum WHILE: ' + sumWhileSN21;
+        
+    }
+}
 
 
 
@@ -369,14 +395,40 @@ Esegui questo programma in due versioni, con il for e con il while. */
 Inserisci un numero, se è pari stampa il numero,
 se è dispari stampa il numero successivo */
 
+const inputSN22 = document.querySelector("#sn22-input1");
 
-// let inputSN22 = parseInt(prompt('Type a number'));
+const btnSubmitSN22 = document.querySelector("#sn22-btn");
+const msgHTMLSN22 = document.querySelector("#sn22-msg");
 
-// if (inputSN22 % 2 != 0) {
-//     console.log(inputSN22 + 1);
-// } else {
-//     console.log(inputSN22);
-// }
+btnSubmitSN22.addEventListener("click", checkSN22);
+
+function checkSN22() {
+
+    // reset classi
+    msgHTMLSN22.classList.remove("false");
+
+    if (inputSN22.value == "") { // controllo il campo se è vuoto
+        msgHTMLSN22.innerHTML = "Please, type a number";
+        msgHTMLSN22.classList.add("false");
+    } else {
+        if (parseInt(inputSN22.value) % 2 != 0) {
+            msgHTMLSN22.innerHTML = parseInt(inputSN22.value) + 1;
+        } else {
+            msgHTMLSN22.innerHTML = inputSN22.value;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
