@@ -299,17 +299,21 @@ function checkSN6() {
     }
 }
 
+
+
+
+
 /* Snack 1.9
 Calcola la somma e la media dei primi 10 numeri. */
 
-let sum = 0;
-let i = 1;
-const arr= [];
+let sumSN19 = 0;
+let iSN19 = 1;
+const arrSN19= [];
 
-while (arr.length < 10) {
-    arr.push(i);
-    sum += i;
-    i++;
+while (arrSN19.length < 10) {
+    arrSN19.push(iSN19);
+    sumSN19 += iSN19;
+    iSN19++;
 }
 
 // do {
@@ -318,16 +322,43 @@ while (arr.length < 10) {
 //     i++;
 // } while (arr.length < 10);
 
-console.log('array: ' + arr);
-console.log('somma: ' + sum);
-console.log('media: ' + sum/arr.length);
+console.log('array: ' + arrSN19);
+console.log('somma: ' + sumSN19);
+console.log('media: ' + sumSN19/arrSN19.length);
 
 
 
 
 
+/* Snack 2.1
+Il software deve chiedere per 5 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.
+Esegui questo programma in due versioni, con il for e con il while. */
 
 
+let inputSN21_for;
+let sumSN21_for = 0;
+
+for (let x = 0; x < 5; x++) {
+    inputSN21_for = parseInt(prompt('Type a number'));
+    sumSN21_for += inputSN21_for;
+}
+
+console.log('somma FOR: ' + sumSN21_for);
+
+
+
+let inputSN21_while;
+let iSN21 = 0;
+let sumSN21_while = 0;
+
+while (iSN21 < 5) {
+    inputSN21_while = parseInt(prompt('Type a number'));
+    sumSN21_while += inputSN21_while;
+    iSN21++;
+}
+
+console.log('somma WHILE: ' + sumSN21_while);
 
 
 
