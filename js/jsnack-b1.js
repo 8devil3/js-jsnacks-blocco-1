@@ -464,9 +464,13 @@ function checkSN23() {
 
 
 
-// ricarica della pagina
+// reset inputs e ricarica della pagina
 const btnReload = document.querySelector("#reload");
+const arrInputs = document.querySelectorAll('input');
 
 btnReload.addEventListener('click', function(){
+    for (x = 0; x < arrInputs.length ; x++) {
+        arrInputs[x].value ='';
+    }
     location.reload();
 })
