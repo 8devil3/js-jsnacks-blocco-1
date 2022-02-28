@@ -369,25 +369,38 @@ Inserisci un numero, se è pari stampa il numero,
 se è dispari stampa il numero successivo */
 
 
-let inputSN22 = parseInt(prompt('Type a number'));
+// let inputSN22 = parseInt(prompt('Type a number'));
 
-if (inputSN22 % 2 != 0) {
-    console.log(inputSN22 + 1);
-} else {
-    console.log(inputSN22);
+// if (inputSN22 % 2 != 0) {
+//     console.log(inputSN22 + 1);
+// } else {
+//     console.log(inputSN22);
+// }
+
+
+
+
+
+/* Snack 2.3
+Generatore di “nomi cognomi” casuali: prendendo una lista di nomi
+e una lista di cognomi, Gatsby vuole generare 
+una falsa lista di 3 invitati. */
+
+const arrNamesSN23 = ['Gianni', 'Francesco', 'Paolo', 'Camilla', 'Laura', 'Elena', 'Alessandra', 'Giorgio', 'Mauro', 'Antonella'];
+const arrSurnamesSN23 = ['Rossi', 'Bianchi', 'Conte', 'Lorenzi', 'Marini', 'Castelli', 'Simoni', 'Bellini', 'Ferri'];
+const arrFullSN23 = [];
+let rndmNameSN23;
+let rndmSurnameSN23;
+
+
+for (let x = 0; x < 3; x++) {
+
+    rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length);
+    rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length);
+    arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]);
 }
 
-
-
-
-
-
-
-
-
-
-
-
+console.log(arrFullSN23);
 
 
 
