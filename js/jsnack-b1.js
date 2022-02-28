@@ -336,29 +336,52 @@ Il programma stampa la somma di tutti i numeri inseriti.
 Esegui questo programma in due versioni, con il for e con il while. */
 
 
-let inputSN21_for;
-let sumSN21_for = 0;
+// let inputSN21_for;
+// let sumSN21_for = 0;
 
-for (let x = 0; x < 5; x++) {
-    inputSN21_for = parseInt(prompt('Type a number'));
-    sumSN21_for += inputSN21_for;
+// for (let x = 0; x < 5; x++) {
+//     inputSN21_for = parseInt(prompt('Type a number'));
+//     sumSN21_for += inputSN21_for;
+// }
+
+// console.log('somma FOR: ' + sumSN21_for);
+
+
+
+// let inputSN21_while;
+// let iSN21 = 0;
+// let sumSN21_while = 0;
+
+// while (iSN21 < 5) {
+//     inputSN21_while = parseInt(prompt('Type a number'));
+//     sumSN21_while += inputSN21_while;
+//     iSN21++;
+// }
+
+// console.log('somma WHILE: ' + sumSN21_while);
+
+
+
+
+
+/* Snack 2.2
+Inserisci un numero, se è pari stampa il numero,
+se è dispari stampa il numero successivo */
+
+
+let inputSN22 = parseInt(prompt('Type a number'));
+
+if (inputSN22 % 2 != 0) {
+    console.log(inputSN22 + 1);
+} else {
+    console.log(inputSN22);
 }
 
-console.log('somma FOR: ' + sumSN21_for);
 
 
 
-let inputSN21_while;
-let iSN21 = 0;
-let sumSN21_while = 0;
 
-while (iSN21 < 5) {
-    inputSN21_while = parseInt(prompt('Type a number'));
-    sumSN21_while += inputSN21_while;
-    iSN21++;
-}
 
-console.log('somma WHILE: ' + sumSN21_while);
 
 
 
