@@ -1,4 +1,4 @@
-/* Snack 1
+/* Snack 1.1
 L’utente inserisce due numeri in successione, con due prompt.
 Il software stampa il maggiore. */
 
@@ -33,7 +33,7 @@ function checkSN1() {
 
 
 
-/* Snack 2
+/* Snack 1.2
 L’utente inserisce due parole in successione, con due prompt.
 Il software stampa prima la parola più corta, poi la parola più lunga. */
 
@@ -71,7 +71,7 @@ function checkSN2() {
 
 
 
-/* Snack 3
+/* Snack 1.3
 Il software deve chiedere per 10 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 (provatelo anche senza array) */
@@ -134,7 +134,7 @@ function checkSN3() {
 
 
 
-/* Snack 4
+/* Snack 1.4
 In un array sono contenuti i nomi degli invitati alla festa del grande
 Gatsby, chiedi all’utente il suo nome e comunicagli se può partecipare o
 no alla festa. */
@@ -201,7 +201,7 @@ function checkSN4() {
 
 
 
-/* Snack 5
+/* Snack 1.5
 Crea un array vuoto.
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array. */
@@ -266,7 +266,7 @@ function checkSN5() {
 
 
 
-/* Snack 6
+/* Snack 1.6
 Chiedi un numero di 4 cifre all’utente
 e calcola la somma di tutte le cifre che compongono il numero. */
 
@@ -298,6 +298,47 @@ function checkSN6() {
         msgHTMLSN6.innerHTML = sumSN6;
     }
 }
+
+/* Snack 1.9
+Calcola la somma e la media dei primi 10 numeri. */
+
+let sum = 0;
+let i = 1;
+const arr= [];
+
+while (arr.length < 10) {
+    arr.push(i);
+    sum += i;
+    i++;
+}
+
+// do {
+//     arr.push(i);
+//     sum += i;
+//     i++;
+// } while (arr.length < 10);
+
+console.log('array: ' + arr);
+console.log('somma: ' + sum);
+console.log('media: ' + sum/arr.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
