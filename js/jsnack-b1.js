@@ -119,7 +119,7 @@ function checkSN3() {
         }
     }
 
-    if (checkNumSN3 == false) { 
+    if (!checkNumSN3) { 
         msgHTMLSN3.innerHTML = "Please, fill all fields!";
         msgHTMLSN3.classList.add("false");
     } else {
@@ -183,10 +183,11 @@ function checkSN4() {
         for (let x = 0; x < nameListSN4.length; x++) { // iterazione tra i nomi
             if (input1SN4.value.toLowerCase() == nameListSN4[x].toLowerCase()) {
                 checkNameSN4 = true;
+                break; // interrompo per evitare le iterazioni inutili
             }
         }
 
-        if (checkNameSN4 == false) { // messaggi all'utente
+        if (!checkNameSN4) { // messaggi all'utente
             msgHTMLSN4.innerHTML = msgFalseSN4;
             msgHTMLSN4.classList.add("false");
         } else {
@@ -242,7 +243,7 @@ function checkSN5() {
         }
     }
 
-    if (checkNumSN5 == false) {
+    if (!checkNumSN5) {
         msgHTMLSN5.innerHTML = "Please, fill all fields!";
         msgHTMLSN5.classList.add("false");
     } else {
