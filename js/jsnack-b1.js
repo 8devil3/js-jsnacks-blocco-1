@@ -306,25 +306,26 @@ function checkSN6() {
 /* Snack 1.9
 Calcola la somma e la media dei primi 10 numeri. */
 
-let sumSN19 = 0;
-let iSN19 = 1;
-const arrSN19= [];
+const msgHTMLSN19 = document.querySelector("#sn19-msg");
 
-while (arrSN19.length < 10) {
-    arrSN19.push(iSN19);
-    sumSN19 += iSN19;
+let sumWhileSN19 = 0;
+let sumDoWhileSN19 = 0;
+let iSN19 = 0;
+let xSN19 = 0;
+const numbersSN19 = 10;
+
+while (iSN19 <= numbersSN19) {
+    sumWhileSN19 += iSN19;
     iSN19++;
 }
 
-// do {
-//     arr.push(i);
-//     sum += i;
-//     i++;
-// } while (arr.length < 10);
+do {
+    sumDoWhileSN19 += xSN19;
+    xSN19++;
+} while (xSN19 <= numbersSN19);
 
-console.log('array: ' + arrSN19);
-console.log('somma: ' + sumSN19);
-console.log('media: ' + sumSN19/arrSN19.length);
+msgHTMLSN19.innerHTML = 'Sum WHILE: ' + sumWhileSN19 + '<br>Average WHILE: ' + sumWhileSN19/numbersSN19 + '<br>Sum DO-WHILE: ' + sumDoWhileSN19 + '<br>Average DO-WHILE: ' + sumDoWhileSN19/numbersSN19;
+
 
 
 

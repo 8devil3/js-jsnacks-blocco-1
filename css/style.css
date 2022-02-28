@@ -78,7 +78,7 @@ button:hover {
 
 p {
     font-weight: 700;
-    height: 1.2rem;
+    min-height: 1.2rem;
 }
 
 .sn-inputs {
