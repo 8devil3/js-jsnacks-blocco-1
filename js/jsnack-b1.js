@@ -450,11 +450,10 @@ function checkSN23() {
         rndmNameSN23 = Math.floor(Math.random() * arrNamesSN23.length); // nome casuale (numero random che parte da zero)
         rndmSurnameSN23 = Math.floor(Math.random() * arrSurnamesSN23.length); // cognome casuale (numero random che parte da zero)
         arrFullSN23.push(arrNamesSN23[rndmNameSN23] + ' ' + arrSurnamesSN23[rndmSurnameSN23]); // compongo nome + cognome 
-
-    let [p1, p2, p3] = arrFullSN23; // destrutturo la lista
-
-    msgHTMLSN23.innerHTML = p1 + '<br>' + p2 + '<br>' + p3; // stampo la lista
     }
+    
+    let [p1, p2, p3] = arrFullSN23; // destrutturo la lista
+    msgHTMLSN23.innerHTML = p1 + '<br>' + p2 + '<br>' + p3; // stampo la lista
 }
 
 
